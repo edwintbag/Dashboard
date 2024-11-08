@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3h18v18H3z"/>
+                    <path d="M3 9h18"/>
+                    <path d="M9 21V9"/>
+                </svg>
+                <span>Chaart</span>
+            </div>
+            
+            <div class="profile">
+                <img src="host.png" alt="Sarah Connor" class="profile-img">
+                <h3>Wango Edwin</h3>
+                <p>wangoedwin@gmail.com</p>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item active">Dashboard</li>
+                    <li class="nav-item">Analytics</li>
+                    <li class="nav-item">Task List</li>
+                    <li class="nav-item">Tracking</li>
+                    <li class="nav-item">Settings</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div>
+                    <h1>Hello, Wango</h1>
+                    <p id="current-date">Today is Monday, 20 October 2021</p>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="add-project-btn" id="add-project-btn">Add New Project</button>
+            </header>
+
+            <div class="project-cards" id="project-cards">
+                <div class="project-card purple">
+                    <h3>Web Development</h3>
+                    <p>32 tasks • 56%</p>
+                </div>
+                <div class="project-card blue">
+                    <h3>Mobile App Design</h3>
+                    <p>12 tasks • 34%</p>
+                </div>
+                <div class="project-card orange">
+                    <h3>Facebook Brand UI Kit</h3>
+                    <p>24 tasks • 73%</p>
+                </div>
+            </div>
+
+            <div class="tasks-section">
+                <div class="tasks">
+                    <h2>Tasks for today</h2>
+                    <div class="task-item">
+                        <div>
+                            <h4>Mobile App</h4>
+                            <p>Progress Pipeline Box</p>
+                        </div>
+                    </div>
+                    <div class="task-item">
+                        <div>
+                            <h4>UX wireframes</h4>
+                            <p>Design UX wireframes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistics">
+                    <div class="stat-card">
+                        <h3>28 h</h3>
+                        <p>Tracked time</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>18</h3>
+                        <p>Finished tasks</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5</h3>
+                        <p>New tasks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-plan">
+                <h3>$9.99 <span>/m</span></h3>
+                <p>Pro Plan - Active subscription</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Calendar -->
+        <aside class="calendar-sidebar">
+            <h2>Calendar</h2>
+            <div class="calendar-events">
+                <div class="calendar-event">
+                    <span class="event-time">10:00</span>
+                    <div>
+                        <h4>Dribbble Shot</h4>
+                        <p>Facebook Brand</p>
+                    </div>
+                </div>
+                <div class="calendar-event">
+                    <span class="event-time">13:20</span>
+                    <div>
+                        <h4>Team Meeting</h4>
+                        <p>Task Management</p>
+                    </div>
+                </div>
+                <div class="calendar-event">
+                    <span class="event-time">15:00</span>
+                    <div>
+                        <h4>UX Research</h4>
+                        <p>Sleep App</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Modal for adding new project -->
+    <div id="add-project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="add-project-form">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" required>
+                <label for="project-tasks">Number of Tasks:</label>
+                <input type="number" id="project-tasks" required>
+                <label for="project-progress">Progress (%):</label>
+                <input type="number" id="project-progress" min="0" max="100" required>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" ></script>
+</body>
+</html>
